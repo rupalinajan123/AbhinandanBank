@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Abhinandan Bank</title>
+    
+    <!-- Stylesheet -->
+    
+    <link rel="icon" href="{{ asset('assets/front/images/favicon.png')}}">
+    <link rel="stylesheet" href="{{ asset('assets/front/css/theme.css?v=1.2')}}">
+    <link rel="stylesheet" href="{{ asset('assets/front/css/nice-select.css?v=1.2')}}">
+    <link rel="stylesheet" href="{{ asset('assets/front/css/magnific-popup.css?v=1.2')}}">
+    <link rel="stylesheet" href="{{ asset('assets/front/css/style.css?v=1.2')}}">
+    <link rel="stylesheet" href="{{ asset('assets/front/css/responsive.css?v=1.2')}}">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DR4QP4G9EX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-DR4QP4G9EX');
+    </script>
+    
+</head>
+
+<body class="bg-two">
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+    <div class="body-overlay" id="body-overlay"></div>
+  
+
+    <!-- accountForm Popup -->
+    <div id="accountForm" class="form_wrapper">
+        <span class="subtitle">Best Offer </span>
+        <h3 class="title"> Quickly Open Your Account</h3>
+        <form>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="nane" placeholder="Your Full Name" required />
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="row clearfix">
+                <div class="col_half">
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                        <input type="text" name="phone" placeholder="Phone" />
+                    </div>
+                </div>
+                <div class="col_half">
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-map-marker"></i></span>
+                        <input type="text" name="zip" placeholder="Zip Code" required />
+                    </div>
+                </div>
+            </div>
+            <div class="input_field">
+                <span><i class="fa fa-cog" aria-hidden="true"></i></span>
+                <select class="select_option">
+                    <option>Account Type</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select>
+            </div>
+            <input class="button" type="submit" value="Submit" />
+        </form>
+    </div>
+    <!-- accountForm end Popup -->
+
+    <!-- topbar-area start -->
+    <div class="topbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <div class="topbar-left text-md-left text-center">
+                        <p><i class="fa fa-map-marker"></i>Head Office-Prabhat Chowk, Amravati</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-right text-center lang">
+                    <div class="topbar-right">
+                        <!--<select id="lang" class="form-control">
+                            <option>English</option>
+                            <option>मराठी</option>
+                        </select>-->
+                        <!-- <select name="change_lan" class="form-control lang" onchange="change_language(this.value)">
+                            <option value="EN" {{ (Session::get('site_language')=='EN')? 'selected':'' }} > English</option> -->
+                            <!--<option value="HI" >हिंदी</option>-->
+                            <!-- <option value="MR" {{ (Session::get('site_language')=='MR')? 'selected':'' }}>मराठी</option>
+                        </select> -->    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- topbar-area end -->
+
+    <!-- header-area start -->
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="logo">
+                        <a href="{{ URL::to('/')}}"><img src="{{ asset('assets/front/images/logo2.jpg')}}" class="years-logo" alt="img"> <img src="{{ asset('assets/front/images/logo.png')}}" class="mr-2" alt="img"> 
+                        <span>Abhinandan Urban Co. Op. Bank Ltd.<span></a>
+                    </div>
+                </div>
+                <div class="col-md-3 text-lg-right text-center">
+                    <div class="media d-sm-inline-flex m-0">
+                        <div class="media-left align-self-center">
+                            <img src="{{ asset('assets/front/images/icon/phone.png')}}" alt="phone">
+                        </div>
+                        <div class="media-body text-left">
+                            <p>Free Call To Us:</p>
+                            <p>0721 2563440</p>
+                        </div>
+                    </div>
+                    
+                    <!-- <a id="account" class="btn btn-round d-lg-inline-block d-none" href="#">Registration</a>  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header-area end -->
+
+    <!-- navbar start -->
+    
+    <div class="navbar-area bg-one">
+        <nav class="navbar navbar-area navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#banlank_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo d-block d-lg-none">
+                    <a href="index.html"><img src="{{ asset('assets/front/images/logo.png')}}" alt="img"></a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="banlank_main_menu">
+                    
+<!--<ul class="navbar-nav menu-open">
+	<li class="active"><a href="{{ URL::to('/')}}">Home</a></li>
+	<li class="menu-item-has-children current-menu-item"><a href="#">About Us</a>
+	<ul class="sub-menu">
+		<li><a href="{{ URL::to('/financial-strength')}}">Financial Strength</a></li>
+		<li><a href="{{ URL::to('/history')}}">History</a></li>
+		<li><a href="{{ URL::to('/achievements')}}">Achievements</a></li>
+		<li><a href="#">Board of Directors</a></li>
+	</ul>
+	</li>
+	<li class="menu-item-has-children current-menu-item"><a href="#">Loans</a>
+	<ul class="sub-menu">
+		<li><a href="#">Apply for Loan Online</a></li>
+		<li><a href="#">Instant Approval</a></li>
+		<li><a href="#">Loan Benifits</a></li>
+	</ul>
+	</li>
+	<li><a href="#">Services</a></li>
+	<li><a href="{{ URL::to('/branch-details')}}">Branch Details</a></li>
+	<li><a href="#">Photo Gallery</a></li>
+	<li class="menu-item-has-children current-menu-item"><a href="#">Download Forms</a>
+	<ul class="sub-menu">
+		<li><a href="#">KYC form</a></li>
+		<li><a href="#">RTGS &amp; NEFT</a></li>
+		<li><a href="#">Mobile Banking</a></li>
+		<li><a href="#">FD A/C opening form</a></li>
+		<li><a href="#">ATM Form</a></li>
+		<li><a href="#">SMS Banking</a></li>
+	</ul>
+	</li>
+	<li><a href="#">FAQ</a></li>
+	<li><a href="#">Contact</a></li>
+</ul> -->
+
+@if(Session::get('site_language')=='MR')
+    @php
+        if(isset($data['menudata'][0]->desc_marathi)){
+        $url = URL::to("/");
+        $menuname = str_replace("#url#",$url.'/',$data['menudata'][0]->desc_marathi);
+        echo $menuname;
+        }
+    @endphp
+@else    
+    @php
+        if(isset($data['menudata'][0]->desc_english)){
+        $url = URL::to("/");
+        $menuname = str_replace("#url#",$url.'/',$data['menudata'][0]->desc_english);
+        echo $menuname;
+        }
+    @endphp
+@endif
+
+<!-- <a href="#" class="ml-auto search"><i class="fa fa-search"></i></a> -->
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+
+    <script type="text/javascript">
+        function change_language(lan)
+        {
+            if(lan!="")
+            {
+                var datastring = {lan: lan,'ci_csrf_token':''};
+                $.ajax({
+                type: "GET",
+                data:datastring,
+                url: "{{ URL::to('/ch_lang')}}",
+                success: function(msg)
+                    {
+                      location.reload();
+                    }
+                });
+            }
+         }
+
+     
+    </script> <!-- banner start -->
