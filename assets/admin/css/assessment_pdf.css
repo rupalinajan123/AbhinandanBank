@@ -1,0 +1,22 @@
+h3, h4, h5{
+	 font-weight: bold;
+}
+
+table td{
+	padding: 5px; 
+	font-size: 12px;
+}
+
+.head td{
+	background: #31AFF5; 
+	color:#fff;
+	font-weight: bold;
+}
+
+@media print {
+    .page-break {page-break-before: always;}
+}
+
+.bold-text{
+	font-weight: bold;
+}
